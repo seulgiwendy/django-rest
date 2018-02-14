@@ -1,0 +1,50 @@
+.title {
+    color: black;
+}
+
+.title .title-caption {
+    margin: 15px;
+    float: left;
+}
+
+#basic-navbar {
+    background-color: yellow;
+}
+
+#basic-navbar-caption {
+    margin: 15px;
+}
+
+.comment-panel {
+    width: 250px;
+    height: 200px;
+    margin: 10px 50px;
+}
+
+.comment-panel:nth-child(5n):after {
+    content: "";
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex-flow: wrap;
+}
+
+#basic-navbar-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.default-nav-buttons {
+    margin: 15px;
+    margin-left: auto;
+}
+
+.navigation-button {
+    margin-left: 15px;
+}
+
+#article-content {
+    height: 200px;
+}

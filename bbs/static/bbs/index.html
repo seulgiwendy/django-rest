@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>BBS with DRF</title>
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/custom.css"/>
+</head>
+<body>
+    <nav>
+        <div class="navbar navbar-default" id="basic-navbar">
+            <div class="container-fluid" id="basic-navbar-container">
+                <div class="title title-caption">
+                     <h3 id="basic-navbar-caption"><span class="glyphicon glyphicon-fire"></span> &nbsp;Hello Django REST Framework</h3>
+                </div>
+                <div class="default-nav-buttons">
+                    <button class="btn btn-danger navigation-button" data-toggle="modal" data-target="#myModal">글 남기기</button>
+                    <button class="btn btn-info navigation-button" onclick="location.href='https://paypal.me/wheejuni'" >후원하기</button>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+<div class="container-fluid main-container" id="main-body">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">글 남기기</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="article-title">글 제목</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="article-title">
+                    </div>
+                    <label for="article-content">내용</label>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" id="article-content"> </textarea>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal", onclick="sendArticle()">저장</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+    <template id="article-template">
+        <div class="panel panel-default comment-panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                </h3>
+            </div>
+            <div class="panel-body">
+            </div>
+        </div>
+    </template>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/index.js"></script>
+
+</body>
+</html>
