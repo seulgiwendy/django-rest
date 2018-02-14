@@ -3,7 +3,6 @@ from django.contrib import admin
 # Register your models here.
 from django.contrib.auth.admin import UserAdmin
 
-from bbs.models import Article, User
+from bbs.models import Article
 
 admin.site.register(Article)
-admin.site.register(User, UserAdmin)
