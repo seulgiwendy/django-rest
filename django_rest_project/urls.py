@@ -16,11 +16,13 @@ Including another URLconf
 import rest_framework
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 from rest_framework import routers
 from rest_framework.authtoken.views import obtain_auth_token
 
 from bbs import views
+from django_rest_project import settings
 
 router = routers.DefaultRouter()
 router.register(r'articles', views.ArticleViewSet)
@@ -30,3 +32,7 @@ urlpatterns = [
     url(r'api-token-auth', rest_framework.authtoken.views.obtain_auth_token),
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    urlpatterns += staticfiles_urlpatterns()
+
