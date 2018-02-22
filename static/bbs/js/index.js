@@ -23,7 +23,7 @@ const sendArticle = () => {
     titleElement.value = '';
     contentElement.value = '';
 
-    fetch("http://ec2-52-79-34-149.ap-northeast-2.compute.amazonaws.com:8000/articles/", {
+    fetch("http://ec2-52-79-34-149.ap-northeast-2.compute.amazonaws.com/articles/", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ const addElement = (article) => {
 }
 
 window.onload = () => {
-    fetch("http://ec2-52-79-34-149.ap-northeast-2.compute.amazonaws.com:8000/articles/", {
+    fetch("http://ec2-52-79-34-149.ap-northeast-2.compute.amazonaws.com/articles/", {
         method: 'GET',
     })
         .then(articles => {
