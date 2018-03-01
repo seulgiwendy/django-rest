@@ -6,8 +6,12 @@ const Article = function(title, content) {
     this.notice = false;
 }
 
-Article.prototype.isNotice = () => {
+Article.prototype.isNotice = function()  {
     return this.notice;
+}
+
+Article.prototype.setNotice = function() {
+    this.notice = true;
 }
 
 const sendArticle = () => {

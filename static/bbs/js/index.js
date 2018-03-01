@@ -6,7 +6,7 @@ const Article = function(title, content) {
     this.notice = false;
 }
 
-Article.prototype.isNotice = () => {
+Article.prototype.isNotice = function()  {
     return this.notice;
 }
 
