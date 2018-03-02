@@ -10,6 +10,10 @@ Article.prototype.isNotice = function()  {
     return this.notice;
 }
 
+Article.prototype.setNotice = function() {
+    this.notice = true;
+}
+
 const sendArticle = () => {
 
     var titleElement = document.querySelector('#article-title');
@@ -23,7 +27,7 @@ const sendArticle = () => {
     titleElement.value = '';
     contentElement.value = '';
 
-    fetch("https://aws.wheejuni.com/articles/", {
+    fetch("https://api.wheejuni.com/articles/", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -58,7 +62,7 @@ const addElement = (article) => {
 }
 
 window.onload = () => {
-    fetch("https://aws.wheejuni.com/articles/", {
+    fetch("https://api.wheejuni.com/articles/", {
         method: 'GET',
     })
         .then(articles => {

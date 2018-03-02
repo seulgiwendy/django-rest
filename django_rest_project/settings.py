@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@_o177d=nv2)0bgi^7o8z3xd(a19$2htwu!n(ff*cvt72rw7ym'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [u'ec2-52-79-34-149.ap-northeast-2.compute.amazonaws.com', u'wheejuniec2', u'52.79.34.149', u'aws.wheejuni.com']
+ALLOWED_HOSTS = [u'ec2-52-79-34-149.ap-northeast-2.compute.amazonaws.com', u'wheejuniec2', u'52.79.34.149', u'aws.wheejuni.com', u'api.wheejuni.com']
 
 
 # Application definition
@@ -96,7 +96,7 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
-APPEND_SLASH = False
+APPEND_SLASH = True
 
 
 # Password validation
